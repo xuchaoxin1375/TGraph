@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rice_yellow"
+    android:focusable="true"
+    android:orientation="vertical"
+
+    tools:text="test the color with tools:background to preview
+what's more ,you no need to change the comment after you determine what color to use.
+"
+
+    >
+
+    <TextView
+        android:id="@+id/dialog_edit_tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:padding="@dimen/padding_normal_big"
+        android:text=""
+        android:textSize="@dimen/text_size_title"
+        app:layout_constraintBottom_toTopOf="@+id/dialog_edit_tv_had_same_file"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/title_add_sub_node" />
+
+
+    <TextView
+        android:id="@+id/dialog_edit_tv_had_same_file"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_super_small"
+        android:text="@string/same_name_file"
+        android:textColor="@color/cornell_red2"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_tv_title" />
+
+
+    <MultiAutoCompleteTextView
+        android:id="@+id/dialog_edit_et_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/edit_bg"
+
+        android:gravity="top"
+        android:hint="@string/input_a_new_node"
+        android:inputType="textMultiLine"
+        android:padding="@dimen/padding_normal_big"
+        android:scrollHorizontally="false"
+        android:textColor="@color/jaguar"
+        android:textSize="@dimen/text_size_menu"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline8"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_tv_had_same_file"
+        app:layout_constraintVertical_bias="0.2"
+        tools:text="创建一个BaseActivity,进行模板设计,之后基于模板进行设计,这核心的模板方法模式,它具有固定的算法结构.使用起来结构清晰,而且利于阅读。
+        android:maxLength=
+        android:maxLines=" />
+
+    <ImageView
+        android:id="@+id/dialog_edit_iv_input_clear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/clear_input"
+        app:layout_constraintBottom_toBottomOf="@+id/dialog_edit_et_input"
+        app:layout_constraintEnd_toStartOf="@+id/guideline7"
+        app:layout_constraintStart_toEndOf="@+id/dialog_edit_et_input"
+        app:layout_constraintTop_toTopOf="@+id/dialog_edit_et_input" />
+
+    <!--        android:background="@drawable/"-->
+    <!--        android:padding="@dimen/padding_normal_big"-->
+
+    <!--        android:padding="@dimen/padding_normal_big"-->
+    <!--        android:textSize="10dp"-->
+
+    <!--        android:textSize="20dp"-->
+    <Button
+        android:id="@+id/dialog_btn_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        android:textAllCaps="false"
+        android:textColor="@color/cornell_red"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toStartOf="@+id/dialog_btn_enter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_et_input" />
+
+    <!--        android:background="@drawable/rice_yellow"-->
+    <Button
+        android:id="@+id/dialog_btn_enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/enter"
+        android:textAllCaps="false"
+        android:textColor="@color/chalet_green"
+        app:layout_constraintBottom_toTopOf="@+id/guideline2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/dialog_btn_delete"
+        app:layout_constraintTop_toBottomOf="@+id/dialog_edit_et_input" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.93" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="395dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="20dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

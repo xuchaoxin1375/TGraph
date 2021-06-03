@@ -1,0 +1,8 @@
+/build
+#指定名为res_bak的文件和目录不对其进行git跟踪(具有递归性质)
+res_bak
+#指定当前名为res_bak的目录(文件夹)的文件夹不对其进行git跟踪(对子目录不做该规则的判断)
+#/res_bak
+#指定从当前目录开始,对其所有名为res_bak的子目录(文件夹(包括res_bak的子目录都不做git跟踪)
+#res_bak/
+*_ignore
